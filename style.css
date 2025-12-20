@@ -1,0 +1,54 @@
+/* Full-screen solid background */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* album cover on the left */
+  padding-left: 5%;
+  background-color: #7E7E7E; /* solid grey background */
+  position: relative;
+}
+
+/* Container for album + track info */
+.now-playing-content {
+  display: flex;
+  align-items: center;
+  gap: 6rem; /* space between album and text */
+  width: 100%;
+  padding: 2rem 0;
+}
+
+/* Album cover */
+#album-art {
+  width: 350px;
+  height: 350px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* subtle shadow for depth */
+}
+
+/* Track info container */
+.track-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Song title */
+.track-info h2 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Artist name */
+.track-info p {
+  margin: 8px 0 0 0;
+  font-size: 2rem;
+  opacity: 0.85;
+}
