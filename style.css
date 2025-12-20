@@ -1,0 +1,65 @@
+/* Full-screen background image */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* content starts from left */
+  padding-left: 5%;
+  
+  /* YOUR GREY BACKGROUND IMAGE */
+  background-image: url('https://i.ibb.co/S4M5nGZ6/Untitled-design.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay container with frosted glass effect */
+.now-playing-content {
+  display: flex;
+  align-items: center;
+  gap: 6rem; /* space between album and text */
+  width: 100%;
+  padding: 2rem 0;
+
+  /* FROSTED GLASS */
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  backdrop-filter: blur(20px); /* strong blur */
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Prevent entire area from looking like a card — total page, no box */
+  border: none;
+  box-shadow: none;
+}
+
+/* Album cover styling */
+#album-art {
+  width: 350px;
+  height: 350px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* subtle shadow for depth */
+}
+
+/* Song info text */
+.track-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-info h2 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.track-info p {
+  margin: 8px 0 0 0;
+  font-size: 2rem;
+  opacity: 0.85;
+}
