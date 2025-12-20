@@ -1,0 +1,67 @@
+/* Grey gradient background layer for visible frosted effect */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a0a0a0, #707070); /* subtle gradient */
+  z-index: 0;
+}
+
+/* Full-screen body */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* content starts from left */
+  font-family: sans-serif;
+  color: white;
+  position: relative;
+}
+
+/* Now Playing content overlay with frosted glass */
+.now-playing-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 6rem; /* more space between album and text */
+  width: 100%;
+  padding-left: 5%;
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent overlay */
+  backdrop-filter: blur(20px); /* frosted effect */
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 0; /* no card rounding */
+}
+
+/* Album cover */
+#album-art {
+  width: 350px;  /* bigger album cover */
+  height: 350px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
+/* Track info (song title + artist) */
+.track-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-info h2 {
+  margin: 0;
+  font-size: 3rem; /* larger title */
+  font-weight: bold;
+}
+
+.track-info p {
+  margin: 10px 0 0 0;
+  font-size: 2rem;
+  opacity: 0.85;
+}
